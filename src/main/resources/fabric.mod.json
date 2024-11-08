@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "sbno_shop",
+  "version": "${version}",
+  "name": "sbno_shop",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/sbno_shop/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "sbno.sbno_shop.client.Sbno_shopClient"
+    ],
+    "main": [
+      "sbno.sbno_shop.Sbno_shop"
+    ]
+  },
+  "mixins": [
+    "sbno_shop.mixins.json",
+    {
+      "config": "sbno_shop.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
